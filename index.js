@@ -15,6 +15,12 @@ const fragmentos = [
   "Se o mundo te moldou, parabéns: agora você é uma cópia funcional e vazia."
 ];
 
+// ROTA RAIZ
+app.get('/', (req, res) => {
+  res.send('🦖 API da Caverna tá viva porra!');
+});
+
+// ROTA DOS FRAGMENTOS
 app.get('/fragmento', (req, res) => {
   const aleatorio = fragmentos[Math.floor(Math.random() * fragmentos.length)];
   res.json({ texto: aleatorio });
